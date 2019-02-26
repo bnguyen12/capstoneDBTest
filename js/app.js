@@ -1,5 +1,4 @@
 require('colors');
-require('dotenv').config();
 
 let Connection = require('tedious').Connection;
 let Request = require('tedious').Request;
