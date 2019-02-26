@@ -1,4 +1,6 @@
 require('colors');
+require('dotenv').config();
+
 let Connection = require('tedious').Connection;
 let Request = require('tedious').Request;
 let TYPES = require('tedious').TYPES;
@@ -7,8 +9,8 @@ let config = {
     authentication: {
         type: 'default',
         options: {
-            userName: '',
-            password: ''
+            userName: process.env.DB_USERNAME,
+            password: process.env.DB_PASSWORD
         }
     },
     server: 'capstonedemoserver.database.windows.net',
